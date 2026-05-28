@@ -3396,6 +3396,14 @@
        JAVASCRIPT DYNAMIC INTERACTIONS
        ==================================================== -->
   <script>
+    // Force page to always scroll to the top on refresh
+    if (history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      window.scrollTo(0, 0);
+    });
+
     // 1. Close Top Demo Banner
     function closeTopBanner() {
       const banner = document.getElementById('topBanner');
